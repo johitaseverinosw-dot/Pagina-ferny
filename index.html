@@ -663,22 +663,7 @@ const recuerdos = [
   "IMG_4046.jpeg"
 ];
 
-const muro = document.getElementById("muroFotos");
 
-recuerdos.forEach(function(archivo) {
-  const foto = document.createElement("div");
-  foto.className = "foto-prueba";
-
-  const ruta = archivo === "1000000254.jpeg"
-  ? ""
-  : "";
-
-  foto.innerHTML = `
-    <img src="${ruta}${archivo}" alt="Nuestro recuerdo">
-  `;
-
-  muro.appendChild(foto);
-});
 
 
 .pagina-fotos::before {
