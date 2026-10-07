@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Ferny ❤️</title>
+  <style>
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #090014, #30002f, #090014);
+  color: white;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
+.estrellas {
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(circle, white 1px, transparent 1px),
+    radial-gradient(circle, #ff9bd8 1px, transparent 1px);
+  background-size: 70px 70px, 110px 110px;
+  animation: moverEstrellas 12s linear infinite;
+}
+
+.estrellas::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: white;
+  border-radius: 50%;
+  top: 20%;
+  left: 10%;
+  box-shadow:
+    80px 40px white,
+    160px 120px #ff9dcc,
+    250px 60px white,
+    320px 180px #ff9dcc,
+    50px 300px white,
+    280px 350px white;
+  animation: destellos 2s ease-in-out infinite alternate;
+}
+
+@keyframes destellos {
+  from {
+    opacity: 0.2;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.carta {
+  position: relative;
+  z-index: 2;
+  width: 90%;
+  max-width: 420px;
+  padding: 35px 25px;
+  text-align: center;
+  border-radius: 25px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  box-shadow:
+  0 0 25px rgba(255,0,150,0.3),
+  0 0 50px rgba(255,79,163,0.15);
+animation: brilloCarta 3s ease-in-out infinite alternate;
+  backdrop-filter: blur(10px);
+} @keyframes brilloCarta {
+  from {
+    box-shadow:
+      0 0 25px rgba(255,0,150,0.3),
+      0 0 50px rgba(255,79,163,0.15);
+  }
+
+  to {
+    box-shadow:
+      0 0 40px rgba(255,0,150,0.5),
+      0 0 80px rgba(255,79,163,0.3);
+  }
+}
+.corazon {
+  font-size: 80px;
+  color: #ff4fa3;
+  text-shadow:
+    0 0 10px #ff4fa3,
+    0 0 25px #ff4fa3,
+    0 0 45px #ff4fa3;
+  animation: latido 1.2s infinite, brillo 2s infinite alternate;
+}
+
+@keyframes brillo {
+  from {
+    filter: brightness(1);
+  }
+
+  to {
+    filter: brightness(1.5);
+  }
+}
+h1 {
+  font-size: 42px;
+  margin: 10px 0;
+}
+
+.dedicatoria {
+  font-size: 20px;
+  color: #ffd1e8;
+  margin: 10px 0 0;
+  animation: aparecer 2s ease;
+}
+
+h1 {
+  font-size: 42px;
+  margin: 10px 0;
+  color: white;
+  text-shadow:
+    0 0 8px #ff9dcc,
+    0 0 20px #ff4fa3,
+    0 0 40px #ff4fa3;
+  animation: destello 2.5s infinite alternate;
+}
+
+@keyframes destello {
+  from {
+    text-shadow:
+      0 0 8px #ff9dcc,
+      0 0 20px #ff4fa3,
+      0 0 30px #ff4fa3;
+  }
+
+  to {
+    text-shadow:
+      0 0 12px #ffffff,
+      0 0 30px #ff4fa3,
+      0 0 55px #ff4fa3;
+  }
+}
+
+.intro {
+  font-size: 17px;
+  color: #ffffff;
+  margin-top: 15px;
+  animation: aparecer 2.5s ease;
+}
+
+#inicio button {
+  animation: aparecer 3s ease;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h2 {
+  color: #ff9dcc;
+  font-size: 30px;
+  text-shadow:
+    0 0 8px #ff9dcc,
+    0 0 20px #ff4fa3,
+    0 0 35px #ff4fa3;
+  animation: brilloTitulo 2s ease-in-out infinite alternate;
+}
+
+@keyframes brilloTitulo {
+  from {
+    text-shadow:
+      0 0 8px #ff9dcc,
+      0 0 20px #ff4fa3;
+  }
+
+  to {
+    text-shadow:
+      0 0 15px #ffffff,
+      0 0 30px #ff4fa3,
+      0 0 45px #ff4fa3;
+  }
+}
+
+p {
+  font-size: 17px;
+  line-height: 1.6;
+} button {
+  margin-top: 20px;
+  padding: 16px 28px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #ff4fa3, #ff1493);
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  box-shadow:
+    0 0 15px rgba(255,79,163,0.6),
+    0 0 35px rgba(255,79,163,0.3);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button {
+  animation: brilloBoton 2s infinite alternate;
+}
+
+@keyframes brilloBoton {
+  from {
+    box-shadow:
+      0 0 15px rgba(255,79,163,0.6),
+      0 0 35px rgba(255,79,163,0.3);
+  }
+
+  to {
+    box-shadow:
+      0 0 25px rgba(255,79,163,0.9),
+      0 0 55px rgba(255,79,163,0.6);
+  }
+}
+
+button:active {
+  animation: reboteBoton 0.25s ease;
+  box-shadow: 0 0 30px rgba(255,79,163,0.9);
+}
+
+@keyframes reboteBoton {
+  0% {
+    transform: scale(0.90);
+  }
+
+  50% {
+    transform: scale(0.96);
+  }
+
+  100% {
+    transform: scale(0.90);
+  }
+}
+
+.oculto {
+  display: none;
+}
+
+#mensaje:not(.oculto) {
+  animation: aparecerCarta 1.2s ease;
+}
+
+@keyframes aparecerCarta {
+  from {
+    opacity: 0;
+    transform: translateY(25px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+#mensaje p {
+  animation: aparecerTexto 1s ease both;
+}
+
+#mensaje p:nth-of-type(2) {
+  animation-delay: 0.4s;
+}
+
+#mensaje p:nth-of-type(3) {
+  animation-delay: 0.8s;
+}
+
+@keyframes aparecerTexto {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.final {
+  color: #ffb6dc;
+  font-size: 22px;
+  font-weight: bold;
+  text-shadow:
+    0 0 8px #ff9dcc,
+    0 0 18px #ff4fa3;
+ animation: brilloFinal 2s ease-in-out infinite alternate,
+           latidoFinal 1.5s ease-in-out infinite;
+}
+
+@keyframes brilloFinal {
+  from {
+    opacity: 0.8;
+    text-shadow:
+      0 0 8px #ff9dcc,
+      0 0 18px #ff4fa3;
+  }
+
+@keyframes latidoFinal {
+  0%, 100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.55);
+  }
+}
+
+  to {
+    opacity: 1;
+    text-shadow:
+      0 0 15px #ffffff,
+      0 0 30px #ff4fa3,
+      0 0 45px #ff4fa3;
+  }
+}
+
+@keyframes latido {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+} .corazon-flotante {
+  position: fixed;
+  color: #ff9dcc;
+  font-size: 18px;
+  opacity: 0;
+  pointer-events: none;
+  animation: flotar 5s linear infinite;
+  z-index: 1;
+}
+
+@keyframes flotar {
+  0% {
+    transform: translateY(20px) scale(0.7);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0.8;
+  }
+
+  80% {
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translateY(-100vh) scale(1.2);
+    opacity: 0;
+  }
+}
+@keyframes moverEstrellas {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 -100px;
+  }
+}
+
+.foto-polaroid {
+  position: fixed;
+  top: 15px;
+  right: 10px;
+  width: 90px;
+  padding: 7px 7px 12px;
+  background: white;
+ box-shadow:
+  0 5px 15px rgba(0,0,0,0.4),
+  0 0 20px rgba(255,79,163,0.45);
+  transform: rotate(7deg);
+  z-index: 5;
+
+animation: aparecerFoto 1s ease,
+           flotarFoto 2s ease-in-out infinite,
+           brilloFoto 2.5s ease-in-out infinite alternate;
+
+}
+
+@keyframes aparecerFoto {
+  from {
+    opacity: 0;
+    transform: rotate(7deg) scale(0.7);
+  }
+
+@keyframes flotarFoto {
+  0% {
+    transform: rotate(7deg) translateY(0);
+  }
+
+  25% {
+    transform: rotate(4deg) translateY(12px);
+  }
+
+  50% {
+    transform: rotate(10deg) translateY(25px);
+  }
+
+  75% {
+    transform: rotate(5deg) translateY(12px);
+  }
+
+  100% {
+    transform: rotate(7deg) translateY(0);
+  }
+}
+
+  to {
+    opacity: 1;
+    transform: rotate(7deg) scale(1);
+  }
+}
+
+@keyframes brilloFoto {
+  from {
+    filter: brightness(1);
+  }
+
+  to {
+    filter: brightness(1.18);
+  }
+}
+
+.foto-polaroid img {
+  width: 100%;
+  height: 70px;
+  object-fit: cover;
+  display: block;
+}
+
+.foto-polaroid div {
+  color: #333;
+  font-size: 9px;
+  margin-top: 6px;
+  text-align: center;
+  font-family: cursive;
+}
+
+.pagina-fotos {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: none;
+  animation: entrarFotos 0.8s ease;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 30px 20px;
+
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255,79,163,0.25), transparent 30%),
+    radial-gradient(circle at 80% 80%, rgba(180,50,180,0.2), transparent 30%),
+    linear-gradient(135deg, #120018, #3b0038, #16001f);
+
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,0.9) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255,255,255,0.6) 1px, transparent 1px);
+
+  background-size: 90px 90px, 140px 140px;
+  background-position: 20px 30px, 70px 80px;
+}
+
+@keyframes entrarFotos {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} .pagina-fotos::after {
+  content: "✦";
+  position: fixed;
+  top: 100px;
+  left: 20%;
+  z-index: 9999;
+  color: white;
+  font-size: 25px;
+  pointer-events: none;
+  text-shadow: 0 0 10px white, 0 0 20px #ff4fa3;
+}
+
+.titulo-recuerdos {
+  margin: 10px 0 5px;
+  font-size: 32px;
+  color: #ffb6dc;
+  text-shadow:
+    0 0 8px #ff9dcc,
+    0 0 20px #ff4fa3,
+    0 0 35px #ff4fa3;
+}
+
+.subtitulo-recuerdos {
+  margin-top: 0;
+  color: #ffd8eb;
+  font-size: 15px;
+  opacity: 0.85;
+}
+
+.frase-fondo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3000px;
+  z-index: 2;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.frase-fondo span {
+  position: absolute;
+  color: rgba(255, 182, 220, 0.35);
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow:
+    0 0 10px #ff4fa3,
+    0 0 25px #ff4fa3;
+  white-space: nowrap;
+transform: translateX(-50%);
+  animation: aparecerFrase 5s ease-in-out forwards;
+}
+
+@keyframes aparecerFrase {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  20% {
+    opacity: 0.5;
+  }
+
+  70% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+}
+
+.titulo-recuerdos,
+.subtitulo-recuerdos {
+  position: relative;
+  z-index: 1;
+}
+
+.foto-prueba {
+  width: 80px;
+  margin: 35px auto;
+  transform: rotate(-7deg);
+  background: white;
+  padding: 6px 6px 10px;
+ box-shadow: 0 0 10px rgba(255, 100, 190, 0.7);
+  position: relative;
+  z-index: 2;
+}
+
+.foto-prueba {
+  animation:
+    respirarFoto 3s ease-in-out infinite,
+    brilloFoto 2s ease-in-out infinite;
+}
+
+@keyframes respirarFoto {
+  0%, 100% {
+    transform: rotate(-7deg) scale(1);
+  }
+
+  50% {
+    transform: rotate(-7deg) scale(0.94);
+  }
+}
+
+@keyframes brilloFoto {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(255, 100, 190, 0.5);
+  }
+
+  50% {
+    box-shadow: 0 0 18px rgba(255, 100, 190, 0.9);
+  }
+}
+
+.foto-prueba img {
+  width: 100%;
+  height: 65px;
+  object-fit: cover;
+  display: block;
+}
+
+.fecha-recuerdo {
+  color: #333;
+  font-size: 8px;
+  text-align: center;
+  margin-top: 5px;
+  font-family: Arial, sans-serif;
+}
+
+const recuerdos = [
+  "1000042988.jpeg",
+  "1000042811.jpeg",
+  "1000042913.jpeg",
+  "1000042908.jpeg",
+  "1000042910.jpeg",
+  "1000042923.jpeg",
+  "1000000254.jpeg",
+  "1000042888.jpeg",
+  "1000042875.jpeg",
+  "1000042871.jpeg",
+  "1000042857.jpeg",
+  "1000042854.jpeg",
+  "1000042848.png",
+  "1000042837.jpeg",
+  "1000001600.jpeg",
+  "1000042829.jpeg",
+  "1000042818.jpeg",
+  "1000042783.jpeg",
+  "1000042778.jpeg",
+  "1000042771.jpeg",
+  "1000042766.jpeg",
+  "1000042767.jpeg",
+  "1000042760.jpeg",
+  "1000042753.jpeg",
+  "1000049244.jpeg",
+  "1000053398.jpeg",
+  "FullSizeRender.jpeg",
+  "IMG_2185.jpeg",
+  "IMG_2241.jpeg",
+  "IMG_2253.jpeg",
+  "IMG_2411.jpeg",
+  "IMG_2795.jpeg",
+  "IMG_2830.jpeg",
+  "IMG_3026.jpeg",
+  "IMG_3078.jpeg",
+  "IMG_3126.jpeg",
+  "a1614702-3eda-4a87-9b70-f23b978ae6e5.jpeg",
+  "IMG_3195.jpeg",
+  "IMG_3698.jpeg",
+  "35909dca-2a2d-4624-a4f0-7eeb889a0116.jpeg",
+  "IMG_3991.jpeg",
+  "IMG_4022.jpeg",
+  "IMG_4046.jpeg"
+];
+
+const muro = document.getElementById("muroFotos");
+
+recuerdos.forEach(function(archivo) {
+  const foto = document.createElement("div");
+  foto.className = "foto-prueba";
+
+  const ruta = archivo === "1000000254.jpeg"
+    ? ""
+    : "foto/";
+
+  foto.innerHTML = `
+    <img src="${ruta}${archivo}" alt="Nuestro recuerdo">
+  `;
+
+  muro.appendChild(foto);
+});
+
+
+.pagina-fotos::before {
+  content: "";
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  width: 4px;
+  height: calc(100% - 150px);
+
+  background: #ff2f81;
+
+  box-shadow:
+    0 0 6px #ff2f81,
+    0 0 12px #ff1744,
+    0 0 22px #ff1744,
+    0 0 35px rgba(255, 47, 129, 0.9);
+
+  z-index: 0;
+
+  clip-path: polygon(
+    50% 0%,
+    42% 5%,
+    58% 10%,
+    42% 15%,
+    58% 20%,
+    42% 25%,
+    58% 30%,
+    42% 35%,
+    58% 40%,
+    42% 45%,
+    58% 50%,
+    42% 55%,
+    58% 60%,
+    42% 65%,
+    58% 70%,
+    42% 75%,
+    58% 80%,
+    42% 85%,
+    58% 90%,
+    50% 100%
+  );
+}
+
+.galeria-recuerdos {
+position: relative;
+z-index: 3;
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  justify-content: center;
+  column-gap: 12px;
+  row-gap: 70px;
+}
+
+.galeria-recuerdos .foto-prueba {
+  opacity: 0;
+}
+
+.galeria-recuerdos .foto-prueba.mostrar-recuerdo {
+  opacity: 1;
+  transition: opacity 0.8s ease;
+}
+
+.foto-grande {
+position: fixed !important;
+  width: auto !important;
+  height: auto !important;
+  max-width: 90vw !important;
+  max-height: 85vh !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) rotate(0deg) !important;
+  z-index: 1000 !important;
+  background: white;
+  padding: 5px;
+  box-shadow: 0 0 30px rgba(255, 80, 180, 0.8);
+}
+
+.foto-grande img {
+  width: auto;
+  height: auto;
+  max-width: 90vw;
+  max-height: 85vh;
+  object-fit: contain;
+}
+
+.estrellas-mural {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3000px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.estrellas-mural span {
+  position: absolute;
+  color: white;
+  font-size: 18px;
+  text-shadow:
+    0 0 6px white,
+    0 0 12px #ff4fa3;
+  animation: estrellaTitila 2s ease-in-out infinite alternate;
+}
+
+@keyframes estrellaTitila {
+  from {
+    opacity: 0.25;
+    transform: scale(0.7);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1.25);
+  }
+}
+
+/* Posición de cada estrella */
+.estrellas-mural span:nth-child(1) { top: 5%; left: 8%; }
+.estrellas-mural span:nth-child(2) { top: 9%; left: 82%; }
+.estrellas-mural span:nth-child(3) { top: 16%; left: 25%; }
+.estrellas-mural span:nth-child(4) { top: 22%; left: 70%; }
+.estrellas-mural span:nth-child(5) { top: 30%; left: 12%; }
+.estrellas-mural span:nth-child(6) { top: 36%; left: 88%; }
+.estrellas-mural span:nth-child(7) { top: 44%; left: 32%; }
+.estrellas-mural span:nth-child(8) { top: 51%; left: 75%; }
+.estrellas-mural span:nth-child(9) { top: 60%; left: 10%; }
+.estrellas-mural span:nth-child(10) { top: 68%; left: 90%; }
+.estrellas-mural span:nth-child(11) { top: 78%; left: 28%; }
+.estrellas-mural span:nth-child(12) { top: 88%; left: 72%; }
+
+.estrella-fugaz {
+  position: fixed;
+  left: -60px;
+  color: white;
+  font-size: 32px;
+  z-index: 9998;
+  pointer-events: none;
+
+  text-shadow:
+    0 0 8px white,
+    0 0 18px #ff9dcc,
+    0 0 35px #ff4fa3,
+    0 0 55px #ff4fa3;
+}
+
+</style>
+</head>
+<body>
+
+<audio id="musica" src="musica/musica.mp3"></audio>
+
+<div class="estrellas"></div>
+
+<div class="foto-polaroid">
+  <img src="foto/1000042977.jpeg" alt="Recuerdo de Ferny">
+  <div>Y pensar q esta a un año de los 18🥺</div>
+</div>
+
+ <div class="carta">
+  <div id="inicio">
+   
+
+  <div class="corazon">♥</div>
+
+
+  <p>Para la niña más hermosa
+  </p>
+
+  <h1>Mi Ferny 💕</h1>
+
+  <p class="intro">
+    Espero y le guste 🥺❤️
+  </p>
+
+  <button onclick="abrirCarta()">
+    Abrir mi carta 💌
+  </button>
+</div>
+  <div id="mensaje" class="oculto">
+<h2>Para ti, Ferny 💕</h2>
+<p>
+  Quería hacer algo diferente para este cumpleaños, esto no era lo q tenía pensado hacerle pero la tecnología me gano, igual trate de hacerle algo parecido, es lo que aprendí hacer e ise lo mejor q pude para la mejor mujer de mi vida
+</p>
+<p>
+ Feliz cumpleaños mi chiquitita bonita felicidades por esta nueva vuelta al sol🌞 espero q tenga un día lindo como usted y que lo disfrute 🫶🏻gracias por permitirme estar con usted este nuevo año a pesar de las peleas, discusiones y diferencias ❤️se que no ah sido fácil este año hemos pasado por artas cosas complicadas ya sea en nuestra relación o problemas familiares 🥺también este año hemos tenido nuestro momento más complicado en nuestra relación pero seguimos aquí a pesar de todo, siempre juntitos y apañandonos el uno al otro 💖gracias por darme está relación y confianza tan bonita, Gracias por apoyarme en todo por hacerme feliz🥰me encanta como eres, porfavor no cambie nunca se lo pido por favor no cambie su forma de ser no cambie su humor no cambie nada porfavor 💗nunca se lo e dicho tan encerio incluso creo q nunca se lo eh dicho Pero no me deje solo desde que la conocí no me imaginado un mundo sin usted💝 no me imaginaria un mundo sin mi niña tierna y chistosa a su manera ni me imagino un mundo sin sus enojos diario😘 tengo tantas cosas q decirle muchos agradecimiento muchas formas de expresarme hacia usted muchas formas de decirle que la amo q nunca terminaría, me guardaré todo esto que siento ahora o si no está carta no la acabaría nunca, bueno espero que lo pase bien💞 tenga en cuenta que siempre estaré para usted hasta que deje de respirar la amo mucho y otra vez gracias por dejarme celebrar esta día tan especial pa usted cómo lo es para mí y celebrar todos los 20 de octubre que vienen junto a usted LA AMO MUCHO BESITO EN SU POTO Y USTED ES MIA NOMAS❤️
+
+</p>
+<p>
+  FELIZ CUMPLEAÑOS MI CHIQUITITA BONITA❤️
+</p>
+<div class="corazon">♥</div>
+<p class="final">
+  Te amo mucho, Ferny. 🌹
+</p>
+
+<button onclick="abrirFotos()">
+  Ver nuestros recuerdos 📸
+</button>
+
+  </div>
+</div>
+
+<div class="pagina-fotos">
+
+<div class="estrellas-mural" id="estrellasMural"></div>
+
+  <div class="frase-fondo" id="fraseFondo"></div>
+
+  <h2 class="titulo-recuerdos">Nuestros recuerdos ❤️</h2>
+
+  <p class="subtitulo-recuerdos">
+    Momentos inolvidables
+  </p>
+
+<div class="galeria-recuerdos">
+
+<div class="foto-prueba">
+  <img src="foto/1000042988.jpeg" alt="Nuestro recuerdo">
+  <div class="fecha-recuerdo">6 del 9 del 2024</div>
+</div>
+
+<div class="foto-prueba">
+  <img src="foto/1000042811.jpeg" alt="Nuestro recuerdo">
+  <div class="fecha-recuerdo">23 del 11 del 2024</div>
+</div>
+
+<div class="foto-prueba">
+  <img src="foto/1000042913.jpeg" alt="Nuestro recuerdo">
+  <div class="fecha-recuerdo">24 del 1 del 2025</div>
+</div>
+
+<div class="foto-prueba">
+  <img src="foto/1000042908.jpeg" alt="Nuestro recuerdo">
+  <div class="fecha-recuerdo">25 del 1 del 2025</div>
+</div>
+
+<div class="foto-prueba">
+  <img src="foto/1000042910.jpeg" alt="Nuestro recuerdo">
+  <div class="fecha-recuerdo">25 del 1 del 2025</div>
+</div>
+
+<div class="foto-prueba">
+  <img src="foto/1000042923.jpeg" alt="Nuestro recuerdo">
+  <div class="fecha-recuerdo">25 del 1 del 2025</div>
+</div>
+
+<div class="foto-prueba">
+  <img src="1000000254.jpeg" alt="Nuestro recuerdo">
+  <div class="fecha-recuerdo">25 del 1 del 2025</div>
+</div>
+
+<div class="foto-prueba">
+  <img src="foto/1000042888.jpeg" alt="Nuestro recuerdo">
+  <div class="fecha-recuerdo">14 del 2 del 2025</div>
+</div>
+
+<div class="foto-prueba">
+  <img src="foto/1000042875.jpeg" alt="Nuestro recuerdo">
+  <div class="fecha-recuerdo">24 del 2 del 2025</div>
+</div>
+
+<div class="foto-prueba">
+  <img src="foto/1000042871.jpeg" alt="Nuestro recuerdo">
+  <div class="fecha-recuerdo">3 del 3 del 2025</div>
+</div>
+
+<div class="foto-prueba">
+  <img src="foto/1000042857.jpeg" alt="Nuestro recuerdo">
+  <div class="fecha-recuerdo">11 del 4 del 2025</div>
+</div>
+
+<div class="foto-prueba">
+  <img src="foto/1000042854.jpeg" alt="Nuestro recuerdo">
+  <div class="fecha-recuerdo">12 del 4 del 2025</div>
+</div>
+
+<div class="foto-prueba">
+  <img src="foto/1000042848.png" alt="Nuestro recuerdo">
+  <div class="fecha-recuerdo">13 del 4 del 2025</div>
+</div>
+
+<div class="foto-prueba">
+  <img src="foto/1000042837.jpeg" alt="Nuestro recuerdo">
+  <div class="fecha-recuerdo">24 del 5 del 2025</div>
+</div>
+
+<div class="foto-prueba">
+  <img src="foto/1000001600.jpeg" alt="Nuestro recuerdo">
+  <div class="fecha-recuerdo">24 del 5 del 2025</div>
+</div>
+
+<div class="foto-prueba">
+  <img src="foto/1000042829.jpeg" alt="Nuestro recuerdo">
+  <div class="fecha-recuerdo">1 del 6 del 2025</div>
+</div>
+
+<div class="foto-prueba">
+  <img src="foto/1000042818.jpeg" alt="Nuestro recuerdo">
+  <div class="fecha-recuerdo">29 del 6 del 2025</div>
+</div>
+
+<div class="foto-prueba">
+  <img src="foto/1000042783.jpeg" alt="Nuestro recuerdo">
+  <div class="fecha-recuerdo">12 del 9 del 2025</div>
+</div>
+
+<div class="foto-prueba">
+  <img src="foto/1000042778.jpeg" alt="Nuestro recuerdo">
+  <div class="fecha-recuerdo">19 del 9 del 2025</div>
+</div>
+
+<div class="foto-prueba">
+  <img src="foto/1000042771.jpeg" alt="Nuestro recuerdo">
+  <div class="fecha-recuerdo">8 del 10 del 2025</div>
+</div>
+
+<div class="foto-prueba">
+  <img src="foto/1000042766.jpeg" alt="Nuestro recuerdo">
+  <div class="fecha-recuerdo">13 del 10 del 2025</div>
+</div>
+
+<div class="foto-prueba">
+  <img src="foto/1000042767.jpeg" alt="Nuestro recuerdo">
+  <div class="fecha-recuerdo">13 del 10 del 2025</div>
+</div>
+
+<div class="foto-prueba">
+  <img src="foto/1000042760.jpeg" alt="Nuestro recuerdo">
+  <div class="fecha-recuerdo">19 del 10 del 2025</div>
+</div>
+
+<div class="foto-prueba">
+  <img src="foto/1000042753.jpeg" alt="Nuestro recuerdo">
+  <div class="fecha-recuerdo">13 del 11 del 2025</div>
+</div>
+
+<div class="foto-prueba">
+  <img src="foto/1000049244.jpeg" alt="Nuestro recuerdo">
+  <div class="fecha-recuerdo">1 del 1 del 2026</div>
+</div>
+
+<div class="foto-prueba">
+  <img src="foto/1000053398.jpeg" alt="Nuestro recuerdo">
+  <div class="fecha-recuerdo">19 del 1 del 2026</div>
+</div>
+
+<div class="foto-prueba">
+  <img src="foto/FullSizeRender.jpeg" alt="Nuestro recuerdo">
+  <div class="fecha-recuerdo">21 del 2 del 2026</div>
+</div>
+
+<div class="foto-prueba">
+  <img src="foto/IMG_2185.jpeg" alt="Nuestro recuerdo">
+  <div class="fecha-recuerdo">21 del 2 del 2026</div>
+</div>
+
+<div class="foto-prueba">
+  <img src="foto/IMG_2241.jpeg" alt="Nuestro recuerdo">
+  <div class="fecha-recuerdo">24 del 2 del 2026</div>
+</div>
+
+<div class="foto-prueba">
+  <img src="foto/IMG_2253.jpeg" alt="Nuestro recuerdo">
+  <div class="fecha-recuerdo">25 del 2 del 2026</div>
+</div>
+
+<div class="foto-prueba">
+  <img src="foto/IMG_2411.jpeg" alt="Nuestro recuerdo">
+  <div class="fecha-recuerdo">17 del 3 del 2026</div>
+</div>
+
+<div class="foto-prueba">
+  <img src="foto/IMG_2795.jpeg" alt="Nuestro recuerdo">
+  <div class="fecha-recuerdo">3 del 5 del 2026</div>
+</div>
+
+<div class="foto-prueba">
+  <img src="foto/IMG_2830.jpeg" alt="Nuestro recuerdo">
+  <div class="fecha-recuerdo">8 del 5 del 2026</div>
+</div>
+
+<div class="foto-prueba">
+  <img src="foto/IMG_3026.jpeg" alt="Nuestro recuerdo">
+  <div class="fecha-recuerdo">28 del 5 del 2026</div>
+</div>
+
+<div class="foto-prueba">
+  <img src="foto/IMG_3078.jpeg" alt="Nuestro recuerdo">
+  <div class="fecha-recuerdo">31 del 5 del 2026</div>
+</div>
+
+<div class="foto-prueba">
+  <img src="foto/IMG_3126.jpeg" alt="Nuestro recuerdo">
+  <div class="fecha-recuerdo">5 del 6 del 2026</div>
+</div>
+
+<div class="foto-prueba">
+  <img src="foto/a1614702-3eda-4a87-9b70-f23b978ae6e5.jpeg" alt="Nuestro recuerdo">
+  <div class="fecha-recuerdo">11 del 6 del 2026</div>
+</div>
+
+<div class="foto-prueba">
+  <img src="foto/IMG_3195.jpeg" alt="Nuestro recuerdo">
+  <div class="fecha-recuerdo">11 del 6 del 2026</div>
+</div>
+
+<div class="foto-prueba">
+  <img src="foto/IMG_3698.jpeg" alt="Nuestro recuerdo">
+  <div class="fecha-recuerdo">21 del 8 del 2026</div>
+</div>
+
+<div class="foto-prueba">
+  <img src="foto/35909dca-2a2d-4624-a4f0-7eeb889a0116.jpeg" alt="Nuestro recuerdo">
+  <div class="fecha-recuerdo">10 del 9 del 2026</div>
+</div>
+
+<div class="foto-prueba">
+  <img src="foto/IMG_3991.jpeg" alt="Nuestro recuerdo">
+  <div class="fecha-recuerdo">11 del 9 del 2026</div>
+</div>
+
+<div class="foto-prueba">
+  <img src="foto/IMG_4022.jpeg" alt="Nuestro recuerdo">
+  <div class="fecha-recuerdo">17 del 9 del 2026</div>
+</div>
+
+<div class="foto-prueba">
+  <img src="foto/IMG_4046.jpeg" alt="Nuestro recuerdo">
+  <div class="fecha-recuerdo">19 del 9 del 2026</div>
+</div>
+
+</div>
+
+  <div class="muro-fotos" id="muroFotos"></div>
+</div>
+
+<script>
+
+function abrirFotos() {
+  document.querySelector(".carta").style.display = "none";
+  document.querySelector(".pagina-fotos").style.display = "block";
+
+  document.querySelectorAll(".galeria-recuerdos .foto-prueba").forEach(function(foto, index) {
+    setTimeout(function() {
+      foto.classList.add("mostrar-recuerdo");
+    }, index * 150);
+  });
+
+  document.querySelectorAll(".corazon-flotante").forEach(function(corazon) {
+    corazon.remove();
+  });
+
+  lluviaEstrellasFugaces();
+}
+
+function abrirCarta() {
+document.getElementById("musica").play(); 
+
+document.getElementById("inicio").classList.add("oculto");
+  document.querySelector(".foto-polaroid").style.display = "none"; document.getElementById("mensaje").classList.remove("oculto");
+  corazones();
+
+lluviaCorazones();
+
+function crearCorazonesFlotantes() {
+  for (let i = 0; i < 25; i++) {
+    let corazon = document.createElement("div");
+
+    corazon.innerHTML = "♥";
+    corazon.className = "corazon-flotante";
+
+    corazon.style.left = Math.random() * 100 + "vw";
+    corazon.style.bottom = "-30px";
+    corazon.style.animationDelay = Math.random() * 5 + "s";
+    corazon.style.fontSize = (12 + Math.random() * 15) + "px";
+
+    document.body.appendChild(corazon);
+  }
+}
+
+crearCorazonesFlotantes();
+
+}
+function corazones() {
+  for (let i = 0; i < 30; i++) {
+    let corazon = document.createElement("div");
+    corazon.innerHTML = "♥";
+    corazon.style.position = "fixed";
+    corazon.style.left = Math.random() * 100 + "vw";
+    corazon.style.bottom = "-30px";
+    corazon.style.color = "#ff4fa3";
+corazon.style.textShadow = "0 0 10px #ff4fa3";
+    corazon.style.fontSize = (15 + Math.random() * 25) + "px";
+    corazon.style.zIndex = "10";
+    document.body.appendChild(corazon);
+    let tiempo = 3000 + Math.random() * 3000;
+    corazon.animate(
+      [
+        {
+          transform: "translateY(0)",
+          opacity: 1
+        },
+        {
+          transform: "translateY(-100vh)",
+          opacity: 0
+        }
+      ],
+      {
+        duration: tiempo,
+        easing: "ease-out"
+      }
+    );
+    setTimeout(function() {
+      corazon.remove();
+    }, tiempo);
+  }
+} function lluviaCorazones() {
+  for (let i = 0; i < 20; i++) {
+    let corazon = document.createElement("div");
+
+    corazon.innerHTML = "♥";
+    corazon.style.position = "fixed";
+    corazon.style.left = Math.random() * 100 + "vw";
+    corazon.style.top = "-30px";
+    corazon.style.color = "#ff9dcc";
+    corazon.style.fontSize = (12 + Math.random() * 18) + "px";
+    corazon.style.zIndex = "20";
+    corazon.style.pointerEvents = "none";
+    corazon.style.textShadow = "0 0 8px #ff4fa3";
+
+    document.body.appendChild(corazon);
+
+    let duracion = 4000 + Math.random() * 3000;
+
+    corazon.animate(
+      [
+        {
+          transform: "translateY(0) rotate(0deg)",
+          opacity: 0
+        },
+        {
+          transform: "translateY(110vh) rotate(360deg)",
+          opacity: 1
+        },
+        {
+          transform: "translateY(120vh) rotate(720deg)",
+          opacity: 0
+        }
+      ],
+      {
+        duration: duracion,
+        easing: "linear"
+      }
+    );
+
+    setTimeout(function() {
+      corazon.remove();
+    }, duracion);
+  }
+} function crearCorazonesFlotantes() {
+  for (let i = 0; i < 25; i++) {
+    let corazon = document.createElement("div");
+
+    corazon.innerHTML = "♥";
+    corazon.className = "corazon-flotante";
+
+    corazon.style.left = Math.random() * 100 + "vw";
+    corazon.style.bottom = "-30px";
+    corazon.style.animationDelay = Math.random() * 5 + "s";
+    corazon.style.fontSize = (12 + Math.random() * 15) + "px";
+
+    document.body.appendChild(corazon);
+  }
+}
+
+const frasesAmor = [
+  "Te amo ❤️",
+  "I love you ❤️",
+  "Je t’aime ❤️",
+  "Ti amo ❤️",
+  "Eu te amo ❤️",
+  "Ich liebe dich ❤️",
+  "Te iubesc ❤️",
+  "Я тебя люблю ❤️",
+  "我爱你 ❤️",
+  "愛してる ❤️",
+  "사랑해 ❤️",
+  "Σ’ αγαπώ ❤️",
+  "أحبك ❤️",
+  "Seni seviyorum ❤️",
+  "Jag älskar dig ❤️",
+  "Ik hou van je ❤️",
+  "Jeg elsker deg ❤️",
+  "Jeg elsker dig ❤️",
+  "Te quiero ❤️",
+  "Mahal kita ❤️"
+];
+
+function cambiarFrase() {
+  const fondo = document.getElementById("fraseFondo");
+
+  fondo.innerHTML = "";
+
+  const idiomasDisponibles = [...frasesAmor];
+
+  const alturaPagina = document.querySelector(".pagina-fotos").scrollHeight;
+
+  for (let i = 0; i < 20; i++) {
+
+    const indice = Math.floor(Math.random() * idiomasDisponibles.length);
+    const fraseTexto = idiomasDisponibles.splice(indice, 1)[0];
+
+    const frase = document.createElement("span");
+
+    frase.textContent = fraseTexto;
+
+    frase.style.left = (5 + Math.random() * 90) + "%";
+    frase.style.top =
+      (50 + Math.random() * Math.max(100, alturaPagina - 150)) + "px";
+
+    frase.style.fontSize = (16 + Math.random() * 14) + "px";
+
+    fondo.appendChild(frase);
+  }
+}
+
+cambiarFrase();
+setInterval(cambiarFrase, 5000);
+
+document.querySelectorAll(".galeria-recuerdos .foto-prueba").forEach(function(foto) {
+  foto.addEventListener("click", function() {
+
+    foto.classList.add("foto-grande");
+
+    foto.addEventListener("click", function() {
+      foto.classList.remove("foto-grande");
+    }, { once: true });
+
+  });
+});
+
+for (let i = 0; i < 200; i++) {
+  const estrella = document.createElement("span");
+
+  estrella.textContent = i % 2 === 0 ? "✦" : "✧";
+
+  estrella.style.top = Math.random() * 3000 + "px";
+  estrella.style.left = Math.random() * 100 + "%";
+
+  estrella.style.fontSize = (10 + Math.random() * 12) + "px";
+  estrella.style.animationDelay = (Math.random() * 3) + "s";
+  estrella.style.animationDuration = (1.5 + Math.random() * 2) + "s";
+
+  estrellasMural.appendChild(estrella);
+}
+
+function crearEstrellaFugaz() {
+  const estrella = document.createElement("div");
+
+  estrella.className = "estrella-fugaz";
+  estrella.innerHTML = "✦";
+
+  document.body.appendChild(estrella);
+
+  const ancho = window.innerWidth;
+
+  // Altura aleatoria
+  estrella.style.top = (10 + Math.random() * 80) + "vh";
+
+  estrella.animate(
+    [
+      {
+        transform: "translateX(0) translateY(0) rotate(-25deg)",
+        opacity: 0
+      },
+      {
+        transform: "translateX(120px) translateY(60px) rotate(-25deg)",
+        opacity: 1
+      },
+      {
+        transform: `translateX(${ancho + 150}px) translateY(300px) rotate(-25deg)`,
+        opacity: 0
+      }
+    ],
+    {
+      duration: 1800,
+      easing: "ease-in-out"
+    }
+  );
+
+  setTimeout(function() {
+    estrella.remove();
+  }, 1900);
+}
+
+function lluviaEstrellasFugaces() {
+  setInterval(function() {
+    for (let i = 0; i <3; i++) {
+      setTimeout(function() {
+        crearEstrellaFugaz();
+      }, i * 150);
+    }
+  }, 2000);
+}
+
+
+</script>
+</body>
+</html>
